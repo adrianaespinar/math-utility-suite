@@ -13,23 +13,20 @@ def calcular_determinante():
 
 tamano = int(input("¿De qué tamaño es la matriz? (Escribe 2 o 3): "))
 
-    # Pedimos los números uno a uno usando input() y los convertimos a entero con int()
-    a = int(input("Introduce el valor de la posición [fila 1, columna 1]: "))
-    b = int(input("Introduce el valor de la posición [fila 1, columna 2]: "))
-    c = int(input("Introduce el valor de la posición [fila 2, columna 1]: "))
-    d = int(input("Introduce el valor de la posición [fila 2, columna 2]: "))
-    
-    # Construimos la matriz con los datos que ha metido el usuario
-    matriz = np.array([
-        [a, b],
-        [c, d]
-    ])∫
-    
-    # Para calcular el determinante
-    determinante = np.linalg.det(matriz)
-    
-    # Usamos round(..., 2) para redondear a 2 decimales y limpiar el "error de máquina"
-    return round(determinante, 2)
 
-######
-##3
+if tamano == 2:
+        print("Has elegido una matriz de 2x2.")
+        # (Aquí pondremos el código para pedir los 4 números de la 2x2 en el siguiente paso)
+        
+        
+elif tamano == 3:
+        print("Has elegido una smatriz de 3x3.")
+        # (Aquí pondremos el código para pedir los 9 números de la 3x3 en el siguiente paso)
+        
+
+else:
+        print("¡Error! Solo sé calcular matrices de orden 2 o 3 por ahora.")
+
+
+
+   
