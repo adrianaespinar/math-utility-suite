@@ -16,9 +16,19 @@ tamano = int(input("¿De qué tamaño es la matriz? (Escribe 2 o 3): "))
 
 if tamano == 2:
         print("Has elegido una matriz de 2x2.")
-        # (Aquí pondremos el código para pedir los 4 números de la 2x2 en el siguiente paso)
-        
-        
+
+        a1 = int(input("Indica el número de la fila 1 columna 1: "))
+        a2 = int(input("Indica el número de la fila 1 columna 2: "))
+        a3 = int(input("Indica el número de la fila 2 columna 1: "))
+        a4 = int(input("Indica el número de la fila 2 columna 2: "))
+
+        # Se puede poner en bloque o en una línea:
+        matriz = np.array([[a1, a2], [a3, a4]])
+
+        determinante = np.linalg.det(matriz)
+
+        return round(determinante, 2)
+
 elif tamano == 3:
         print("Has elegido una smatriz de 3x3.")
         # (Aquí pondremos el código para pedir los 9 números de la 3x3 en el siguiente paso)
