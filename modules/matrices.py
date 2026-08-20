@@ -60,5 +60,3 @@ def calcular_determinante():
 
 
 
-   # Hello there!
-   #Prueba2s
