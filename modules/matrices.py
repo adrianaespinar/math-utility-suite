@@ -15,7 +15,7 @@ def calcular_determinante():
         [c, d]
     ])
     
-    # Calculamos el determinante
+    # Para calcular el determinante
     determinante = np.linalg.det(matriz)
     
     # Usamos round(..., 2) para redondear a 2 decimales y limpiar el "error de máquina"
