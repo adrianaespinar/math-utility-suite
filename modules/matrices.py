@@ -11,10 +11,10 @@ def calcular_determinante():
 # Si el determinante es 0: El área desaparece y se vuelve cero. 
 #  si una matriz tiene determinante 0, significa que está "rota" y no se puede invertir; no tiene salida).
 
-tamano = int(input("¿De qué tamaño es la matriz? (Escribe 2 o 3): "))
+    tamano = int(input("¿De qué tamaño es la matriz? (Escribe 2 o 3): "))
 
 
-if tamano == 2:
+    if tamano == 2:
         print("Has elegido una matriz de 2x2.")
 
         a1 = int(input("Indica el número de la fila 1 columna 1: "))
@@ -29,7 +29,7 @@ if tamano == 2:
 
         return round(determinante, 2)
 
-elif tamano == 3:
+    elif tamano == 3:
         print("Has elegido una smatriz de 3x3.")
         
         a1 = int(input("Fila 1, Columna 1: "))
@@ -55,7 +55,7 @@ elif tamano == 3:
         return round(determinante, 2)
         
 
-else:
+    else:
         print("¡Error! Solo sé calcular matrices de orden 2 o 3 por ahora.")
 
 
