@@ -31,7 +31,28 @@ if tamano == 2:
 
 elif tamano == 3:
         print("Has elegido una smatriz de 3x3.")
-        # (Aquí pondremos el código para pedir los 9 números de la 3x3 en el siguiente paso)
+        
+        a1 = int(input("Fila 1, Columna 1: "))
+        a2 = int(input("Fila 1, Columna 2: "))
+        a3 = int(input("Fila 1, Columna 3: "))
+        a4 = int(input("Fila 2, Columna 1: "))
+        a5 = int(input("Fila 2, Columna 2: "))
+        a6 = int(input("Fila 2, Columna 3: "))
+        a7 = int(input("Fila 3, Columna 1: "))
+        a8 = int(input("Fila 3, Columna 2: "))
+        a9 = int(input("Fila 3, Columna 3: "))
+
+        
+        matriz = np.array([
+            [a1, a2, a3],
+            [a4, a5, a6],
+            [a7, a8, a9]
+        ])
+
+        
+        determinante = np.linalg.det(matriz)
+
+        return round(determinante, 2)
         
 
 else:
