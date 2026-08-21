@@ -3,7 +3,8 @@ import numpy as np
 def menu_matrices():
     print("\n--- DEPARTAMENTO DE MATRICES ---")
     print("1. Calcular determinante (2x2 o 3x3)")
-    print("2. Calcular Traspuesta (A^T) y estudiar Simetría/Antisimetría")
+    print("2. Calcular Traspuesta (A^T) ")
+    print("3. Estudiar Simetría/Antisimetría")
     
     opcion = input("Elige qué operación de matrices quieres hacer (1 o 2): ")
     
