@@ -3,20 +3,49 @@ import numpy as np
 def menu_matrices():
     print("\n--- DEPARTAMENTO DE MATRICES ---")
     print("1. Calcular determinante (2x2 o 3x3)")
-    print("2. Calcular Traspuesta (A^T) ")
+    print("2. Calcular Traspuesta (A^T)")
     print("3. Estudiar Simetría/Antisimetría")
     
-    opcion = input("Elige qué operación de matrices quieres hacer (1 o 2): ")
+    opcion = input("Elige qué operación de matrices quieres hacer (1, 2 o 3): ")
     
     if opcion == "1":
         calcular_determinante()
     elif opcion == "2":
-        analizar_simetria()
+        calcular_transpuesta()  # Aquí llamarás a tu función de la traspuesta
+    elif opcion == "3":
+        estudiar_simetria()     # Y aquí a la de estudiar simetría
     else:
         print("❌ Opción de matrices no válida.")
 
 
 
+def calcular_transpuesta():
+    print("\n--- Cálculo de la Traspuesta ---")
+    
+   
+    m = int(input("¿Cuántas filas tiene la matriz? (m): "))
+    n = int(input("¿Cuántas columnas tiene la matriz? (n): "))
+    
+    print(f"Introduce los elementos fila por fila:")
+    
+    # (se adapta a m y n automáticamente)
+    filas = []
+    for i in range(m):
+        fila = []
+        for j in range(n):
+            valor = int(input(f"Elemento Fila {i+1}, Columna {j+1}: "))
+            fila.append(valor)
+        filas.append(fila)
+        
+    matriz = np.array(filas)
+    
+    transpuesta = matriz.T
+
+    print("\n--- Resultados ---")
+    print("Matriz original (A):\n", matriz)
+    print("\nMatriz Traspuesta (A^T):\n", transpuesta)
+    
+    return transpuesta
 
 
 
