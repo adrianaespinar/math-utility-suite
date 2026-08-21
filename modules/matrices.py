@@ -17,7 +17,7 @@ def menu_matrices():
     else:
         print("❌ Opción de matrices no válida.")
 
-######## little bug
+
 
 
 def calcular_transpuesta():
