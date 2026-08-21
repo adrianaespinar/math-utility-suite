@@ -18,14 +18,13 @@ def menu_matrices():
         print("❌ Opción de matrices no válida.")
 
 ######## little bug
-##
-3##3
+
 
 def calcular_transpuesta():
     print("\n--- Cálculo de la Traspuesta ---")
     
    
-    m = int(input("¿Cuántas filas tiene la matriz? (m): "))
+    m = int(input("¿Cuántas filas tiene la matriz? (m): ")) a
     n = int(input("¿Cuántas columnas tiene la matriz? (n): "))
     
     print(f"Introduce los elementos fila por fila:")
