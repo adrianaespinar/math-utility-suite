@@ -49,6 +49,53 @@ def calcular_transpuesta():
 
 
 
+def estudiar_simetria():
+    print("\n--- Estudio de Simetría y Antisimetría ---")
+    
+    m = int(input("Indica el número de filas (m): "))
+    n = int(input("Indica el número de columnas (n): "))
+    
+    # 2. Restricción de oro: ¿Es cuadrada?
+    if m != n:
+        print(" Error: Para estudiar la simetría o antisimetría, la matriz TIENE que ser cuadrada (mismo número de filas y columnas).")
+        return # Esto frena la función aquí mismo
+        
+    print("Introduce los elementos fila por fila:")
+    filas = []
+    for i in range(m):
+        fila = []
+        for j in range(n):
+            valor = int(input(f"Elemento Fila {i+1}, Columna {j+1}: "))
+            fila.append(valor)
+        filas.append(fila)
+        
+    matriz = np.array(filas)
+    transpuesta = matriz.T
+    
+    # RESULTADOS Estudio Simetria
+    print("\n--- Resultados del Análisis ---")
+    print("Matriz A:\n", matriz)
+    print("\nM, su Traspuesta (A^T):\n", transpuesta)
+    
+    # Comprobación 
+    es_simetrica = np.array_equal(matriz, transpuesta)
+    es_antisimetrica = np.array_equal(matriz, -transpuesta)
+    
+    if es_simetrica:
+        print("\n ¡La matriz es SIMÉTRICA! (Cumple que A = A^T)")
+    elif es_antisimetrica:
+        print("\n ¡La matriz es ANTISIMÉTRICA! (Cumple que A = -A^T)")
+    else:
+        print("\n La matriz es cuadrada, pero NO es ni simétrica ni antisimétrica.")
+
+
+
+
+
+
+
+
+
 
 def calcular_determinante(): 
     print("\n--- 🧮 Cálculo de Determinante (Matriz 2x2) ---")
