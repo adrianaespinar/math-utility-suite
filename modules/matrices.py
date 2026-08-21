@@ -1,5 +1,25 @@
 import numpy as np
 
+def menu_matrices():
+    print("\n--- DEPARTAMENTO DE MATRICES ---")
+    print("1. Calcular determinante (2x2 o 3x3)")
+    print("2. Calcular Traspuesta (A^T) y estudiar Simetría/Antisimetría")
+    
+    opcion = input("Elige qué operación de matrices quieres hacer (1 o 2): ")
+    
+    if opcion == "1":
+        calcular_determinante()
+    elif opcion == "2":
+        analizar_simetria()
+    else:
+        print("❌ Opción de matrices no válida.")
+
+
+
+
+
+
+
 def calcular_determinante(): 
     print("\n--- 🧮 Cálculo de Determinante (Matriz 2x2) ---")
 
