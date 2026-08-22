@@ -1,5 +1,8 @@
 import numpy as np
 
+# Bloque Limpio
+
+
 def menu_matrices():
     print("\n--- DEPARTAMENTO DE MATRICES ---")
     print("1. Calcular determinante (2x2 o 3x3)")
@@ -11,9 +14,9 @@ def menu_matrices():
     if opcion == "1":
         calcular_determinante()
     elif opcion == "2":
-        calcular_transpuesta()  # Aquí llamarás a tu función de la traspuesta
+        calcular_transpuesta()  
     elif opcion == "3":
-        estudiar_simetria()     # Y aquí a la de estudiar simetría
+        estudiar_simetria()     
     else:
         print("❌ Opción de matrices no válida.")
 
@@ -73,22 +76,23 @@ def estudiar_simetria():
     transpuesta = matriz.T #El nombre matriz viene de la linea anterior, establecemos variable "matriz", se podria poner cualquiera. 
                            # El .T es de numpy para calcular la transpuesta
 
-                           
+
     # RESULTADOS Estudio Simetria
     print("\n--- Resultados del Análisis ---")
     print("Matriz A:\n", matriz)
-    print("\nM, su Traspuesta (A^T):\n", transpuesta)
+    print("\nMatriz Traspuesta (A^T):")
+    print(transpuesta)
     
     # Comprobación 
     es_simetrica = np.array_equal(matriz, transpuesta)
     es_antisimetrica = np.array_equal(matriz, -transpuesta)
     
     if es_simetrica:
-        print("\n ¡La matriz es SIMÉTRICA! (Cumple que A = A^T)")
+        print("\n ¡La matriz es Simétrica (Cumple que A = A^T)")
     elif es_antisimetrica:
-        print("\n ¡La matriz es ANTISIMÉTRICA! (Cumple que A = -A^T)")
+        print("\n ¡La matriz es Antisimétrica (Cumple que A = -A^T)")
     else:
-        print("\n La matriz es cuadrada, pero NO es ni simétrica ni antisimétrica.")
+        print("\n La matriz es cuadrada, pero no es ni simétrica ni antisimétrica.")
 
 
 
