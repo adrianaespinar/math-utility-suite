@@ -56,10 +56,9 @@ def estudiar_simetria():
     m = int(input("Indica el número de filas (m): "))
     n = int(input("Indica el número de columnas (n): "))
     
-    # 2. Restricción de oro: ¿Es cuadrada?
     if m != n:
         print(" Error: Para estudiar la simetría o antisimetría, la matriz TIENE que ser cuadrada (mismo número de filas y columnas).")
-        return # Esto frena la función aquí mismo
+        return # Para frenar la función 
         
     print("Introduce los elementos fila por fila:")
     filas = []
@@ -71,8 +70,10 @@ def estudiar_simetria():
         filas.append(fila)
         
     matriz = np.array(filas)
-    transpuesta = matriz.T
-    
+    transpuesta = matriz.T #El nombre matriz viene de la linea anterior, establecemos variable "matriz", se podria poner cualquiera. 
+                           # El .T es de numpy para calcular la transpuesta
+
+                           
     # RESULTADOS Estudio Simetria
     print("\n--- Resultados del Análisis ---")
     print("Matriz A:\n", matriz)
