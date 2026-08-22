@@ -8,6 +8,12 @@ def menu_matrices():
     print("1. Calcular determinante (2x2 o 3x3)")
     print("2. Calcular Traspuesta (A^T)")
     print("3. Estudiar Simetría/Antisimetría")
+    print("4. Suma de matrices")
+    print("5. Resta de matrices")
+    print("6. Producto por un escalar (K · A )")
+    print("7. Multiplicación de matrices (A · B)")
+    print("8. Potencia de una matriz ")
+    print("9. Calcular la matriz inversa (A^-1)")
     
     opcion = input("Elige qué operación de matrices quieres hacer (1, 2 o 3): ")
     
@@ -18,7 +24,7 @@ def menu_matrices():
     elif opcion == "3":
         estudiar_simetria()     
     else:
-        print("❌ Opción de matrices no válida.")
+        print(" Opción de matrices no válida.")
 
 
 
