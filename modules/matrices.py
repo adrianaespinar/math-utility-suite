@@ -27,7 +27,7 @@ def calcular_transpuesta():
     print("\n--- Cálculo de la Traspuesta ---")
     
    
-    m = int(input("¿Cuántas filas tiene la matriz? (m): ")) a
+    m = int(input("¿Cuántas filas tiene la matriz? (m): ")) 
     n = int(input("¿Cuántas columnas tiene la matriz? (n): "))
     
     print(f"Introduce los elementos fila por fila:")
