@@ -15,19 +15,51 @@ def menu_matrices():
     print("8. Potencia de una matriz ")
     print("9. Calcular la matriz inversa (A^-1)")
     
-    opcion = input("Elige qué operación de matrices quieres hacer (1, 2 o 3): ")
+    opcion = input("Elige qué operación de matrices quieres hacer (1, 2, 3...): ")
     
     if opcion == "1":
         calcular_determinante()
     elif opcion == "2":
         calcular_transpuesta()  
     elif opcion == "3":
-        estudiar_simetria()     
+        estudiar_simetria()   
+    elif opcion == "4":
+        suma_matrices()
+    elif opcion == "5":
+        resta_matrices()
+    elif opcion == "6":
+        producto_por_escalar()
+    elif opcion == "7":
+        multiplicar_matrices()
+    elif opcion == "8": 
+        potencia_matriz()
+    elif opcion == "9":
+        matriz_inversa()
     else:
         print(" Opción de matrices no válida.")
 
 
+def suma_matrices():
 
+ return
+
+def resta_matrices():
+    return
+
+def producto_por_escalar():
+    return
+
+def multiplicar_matrices():
+    return
+
+def potencia_matriz():
+    return
+
+def matriz_inversa():
+    return
+
+
+    
 
 def calcular_transpuesta():
     print("\n--- Cálculo de la Traspuesta ---")
