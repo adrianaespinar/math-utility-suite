@@ -39,7 +39,16 @@ def menu_matrices():
         print(" Opción de matrices no válida.")
 
 
-def suma_matrices():
+def suma_matrices(): # m y n deben de ser identicas
+    print("\n--- Estudio de Simetría y Antisimetría ---")
+    
+    m = int(input("Indica el número de filas (m): "))
+    n = int(input("Indica el número de columnas (n): "))
+    
+    if m != n:
+        print(" Error: Para sumar matrices la matriz TIENE que ser cuadrada (mismo número de filas y columnas).")
+        return 
+        
 
  return
 
