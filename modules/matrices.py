@@ -22,7 +22,7 @@ def menu_matrices():
     elif opcion == "2":
         calcular_transpuesta()  
     elif opcion == "3":
-        estudiar_simetria()   
+        estudiar_simetria()  
     elif opcion == "4":
         suma_matrices()
     elif opcion == "5":
@@ -36,21 +36,27 @@ def menu_matrices():
     elif opcion == "9":
         matriz_inversa()
     else:
-        print(" Opción de matrices no válida.")
+      print(" Opción de matrices no válida.")
 
 
 def suma_matrices(): # m y n deben de ser identicas
-    print("\n--- Estudio de Simetría y Antisimetría ---")
+    print("\n--- Suma de Matrices ---")
     
-    m = int(input("Indica el número de filas (m): "))
-    n = int(input("Indica el número de columnas (n): "))
+    print("Dimensiones de la Matriz A:")
+    m_a = int(input("Filas de A (m): "))
+    n_a = int(input("Columnas de A (n): "))
     
-    if m != n:
-        print(" Error: Para sumar matrices la matriz TIENE que ser cuadrada (mismo número de filas y columnas).")
-        return 
+    print("Dimensiones de la Matriz B:")
+    m_b = int(input("Filas de B (m): "))
+    n_b = int(input("Columnas de B (n): "))
+    
+    # Comprobar tamaño para sumar
+    if m_a != m_b or n_a != n_b:
+        print("❌ Error: Para sumar dos matrices, AMBAS deben tener exactamente las mismas dimensiones (mismo número de filas y columnas).")
+        return
         
 
- return
+    return
 
 def resta_matrices():
     return
