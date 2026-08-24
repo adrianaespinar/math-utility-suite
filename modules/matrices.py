@@ -52,7 +52,7 @@ def suma_matrices(): # m y n deben de ser identicas
     
     # Comprobar tamaño para sumar
     if m_a != m_b or n_a != n_b:
-        print("❌ Error: Para sumar dos matrices, AMBAS deben tener exactamente las mismas dimensiones (mismo número de filas y columnas).")
+        print(" Error: Para sumar dos matrices, AMBAS deben tener exactamente las mismas dimensiones (mismo número de filas y columnas)")
         return
         
 
