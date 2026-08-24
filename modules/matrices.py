@@ -1,6 +1,6 @@
 import numpy as np
 
-# Bloque Limpio
+# Falta pedir Matriz B (suma de matrices)
 
 
 def menu_matrices():
