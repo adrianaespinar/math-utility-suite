@@ -60,7 +60,7 @@ def suma_matrices(): # m y n deben de ser identicas
     for i in range(m_a):
         fila = []
         for j in range(n_a):
-            valor = int(input(f "Matriz A - Fila {i+1}, Columna {j+1}"))
+            valor = int(input(f"Matriz A - Fila {i+1}, Columna {j+1}"))
             fila.append(valor)
         filas_a.append(fila)
 
