@@ -54,7 +54,18 @@ def suma_matrices(): # m y n deben de ser identicas
     if m_a != m_b or n_a != n_b:
         print(" Error: Para sumar dos matrices, AMBAS deben tener exactamente las mismas dimensiones (mismo número de filas y columnas)")
         return
-        
+
+    print("Introduce los elementos de la matriz A:") 
+    filas_a= [] 
+    for i in range(m_a):
+        fila = []
+        for j in range(n_a):
+            valor = int(input(f "Matriz A - Fila {i+1}, Columna {j+1}"))
+            fila.append(valor)
+        filas_a.append(fila)
+
+
+    print("Introduce los elementos de la matriz B:")  
 
     return
 
