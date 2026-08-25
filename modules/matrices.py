@@ -137,6 +137,29 @@ def resta_matrices():
     
 
 def producto_por_escalar():
+    print("\n--Producto por un Escalar (k · A)---")
+
+    k = float(input("Introduce el número escalar (k): "))
+    m= int(input("Introduce el número de filas (m):"))
+    n= int(input("Introduce el número de columnas (n):"))
+
+    print("Introduce los elementos de la matriz:")
+    filas = []
+    for i in range(m):
+        fila = []
+        for j in range(n):
+            valor = int(input(f"Elemento Fila {i+1}, Columna {j+1}: "))
+            fila.append(valor)
+        filas.append(fila)
+
+    matriz = np.array(filas)
+
+    resultado = k * matriz
+
+    print("\n--- Resultados ---")
+    print(f"Escalar k = {k}")
+    print("\nMatriz original (A):\n", matriz)
+    print(f"\nMatriz Resultado ({k} · A):\n", resultado)
     return
 
 def multiplicar_matrices():
