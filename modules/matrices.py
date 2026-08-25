@@ -167,9 +167,11 @@ def multiplicar_matrices(): # No hay propiedad conmutativa
     return
 
 def potencia_matriz():
+    print("In process")
     return
 
 def matriz_inversa():
+    print("In process")
     return
 
 
