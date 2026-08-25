@@ -162,7 +162,8 @@ def producto_por_escalar():
     print(f"\nMatriz Resultado ({k} · A):\n", resultado)
     return
 
-def multiplicar_matrices():
+def multiplicar_matrices(): # No hay propiedad conmutativa
+    print("In process")
     return
 
 def potencia_matriz():
