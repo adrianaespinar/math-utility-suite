@@ -60,12 +60,31 @@ def suma_matrices(): # m y n deben de ser identicas
     for i in range(m_a):
         fila = []
         for j in range(n_a):
-            valor = int(input(f"Matriz A - Fila {i+1}, Columna {j+1}"))
+            valor = int(input(f"Matriz A - Fila {i+1}, Columna {j+1}:"))
             fila.append(valor)
         filas_a.append(fila)
 
 
-    print("Introduce los elementos de la matriz B:")  
+    print("\nIntroduce los elementos de la Matriz B:")
+    filas_b = []
+    for i in range(m_b):
+        fila = []
+        for j in range(n_b):
+            valor = int(input(f"Matriz B - Fila {i+1}, Columna {j+1}: "))
+            fila.append(valor)
+        filas_b.append(fila)
+
+    matriz_a = np.array(filas_a)
+    matriz_b = np.array(filas_b)
+    
+    
+    resultado = matriz_a + matriz_b
+    
+    
+    print("\n--- Resultados de la Suma ---")
+    print("Matriz A:\n", matriz_a)
+    print("\nMatriz B:\n", matriz_b)
+    print("\nMatriz Resultado (A + B):\n", resultado)
 
     return
 
