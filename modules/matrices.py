@@ -85,11 +85,56 @@ def suma_matrices(): # m y n deben de ser identicas
     print("Matriz A:\n", matriz_a)
     print("\nMatriz B:\n", matriz_b)
     print("\nMatriz Resultado (A + B):\n", resultado)
-
     return
 
 def resta_matrices():
+    print("\n--- Resta de Matrices ---")
+    
+    print("Dimensiones de la Matriz A:")
+    m_a = int(input("Filas de A (m): "))
+    n_a = int(input("Columnas de A (n): "))
+    
+    print("Dimensiones de la Matriz B:")
+    m_b = int(input("Filas de B (m): "))
+    n_b = int(input("Columnas de B (n): "))
+    
+    
+    if m_a != m_b or n_a != n_b:
+        print(" Error: Para restar dos matrices, AMBAS deben tener exactamente las mismas dimensiones (mismo número de filas y columnas)")
+        return
+
+    print("Introduce los elementos de la matriz A:") 
+    filas_a= [] 
+    for i in range(m_a):
+        fila = []
+        for j in range(n_a):
+            valor = int(input(f"Matriz A - Fila {i+1}, Columna {j+1}:"))
+            fila.append(valor)
+        filas_a.append(fila)
+
+
+    print("\nIntroduce los elementos de la Matriz B:")
+    filas_b = []
+    for i in range(m_b):
+        fila = []
+        for j in range(n_b):
+            valor = int(input(f"Matriz B - Fila {i+1}, Columna {j+1}: "))
+            fila.append(valor)
+        filas_b.append(fila)
+
+    matriz_a = np.array(filas_a)
+    matriz_b = np.array(filas_b)
+    
+    
+    resultado = matriz_a - matriz_b
+    
+    
+    print("\n--- Resultados de la Suma ---")
+    print("Matriz A:\n", matriz_a)
+    print("\nMatriz B:\n", matriz_b)
+    print("\nMatriz Resultado (A - B):\n", resultado)
     return
+    
 
 def producto_por_escalar():
     return
