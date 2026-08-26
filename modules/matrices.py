@@ -163,7 +163,10 @@ def producto_por_escalar():
     return
 
 def multiplicar_matrices(): # No hay propiedad conmutativa
-    print("In process")
+
+    print("---Multiplicar matrices---")
+    # Si la matriz A es 2x3, la matriz B ha de ser obligatoriamente 3xlo que sea. 
+    # Es decir si matriz A es, txc, la matriz B ha de ser mxc.
     return
 
 def potencia_matriz():
