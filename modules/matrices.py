@@ -1,6 +1,6 @@
 import numpy as np
 
-# Falta pedir Matriz B (suma de matrices)
+# ACTUALIZACIÓN; BLOQUE MATRICES TERMINADO 27-08-2026 0:50AM
 
 
 def menu_matrices():
