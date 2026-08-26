@@ -164,9 +164,23 @@ def producto_por_escalar():
 
 def multiplicar_matrices(): # No hay propiedad conmutativa
 
-    print("---Multiplicar matrices---")
+    print("---Multiplicación de matrices---")
     # Si la matriz A es 2x3, la matriz B ha de ser obligatoriamente 3xlo que sea. 
     # Es decir si matriz A es, txc, la matriz B ha de ser mxc.
+
+    print("Dimensiones de la Matriz A:")
+    m_a = int(input("Filas de A (m): "))
+    n_a = int(input("Columnas de A (n): "))
+    
+    print("\nDimensiones de la Matriz B:")
+    m_b = int(input("Filas de B (m): "))
+    n_b = int(input("Columnas de B (n): "))
+
+    if n_a != m_b:
+        print(f" Error: No se pueden multiplicar. Las columnas de A ({n_a}) deben coincidir con las filas de B ({m_b}).")
+        return
+
+
     return
 
 def potencia_matriz():
