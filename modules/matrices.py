@@ -246,6 +246,10 @@ def potencia_matriz():
 
 def matriz_inversa():
     print("In process")
+# La matriz ha de ser cuadrada, m=n, y su determinante no puede ser 0, sino no tiene inversa
+
+
+
     return
 
 
@@ -361,7 +365,7 @@ def calcular_determinante():
         return round(determinante, 2)
 
     elif tamano == 3:
-        print("Has elegido una smatriz de 3x3.")
+        print("Has elegido una matriz de 3x3.")
         
         a1 = int(input("Fila 1, Columna 1: "))
         a2 = int(input("Fila 1, Columna 2: "))
