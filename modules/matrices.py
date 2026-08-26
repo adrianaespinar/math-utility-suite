@@ -245,13 +245,45 @@ def potencia_matriz():
     return
 
 def matriz_inversa():
-    print("In process")
-# La matriz ha de ser cuadrada, m=n, y su determinante no puede ser 0, sino no tiene inversa
-
-
+    print("\n--- Matriz Inversa (A^-1) ---")
+    print("Nota: La matriz debe ser cuadrada y su determinante no puede ser 0.")
+   
+    m = int(input("Indica el número de filas (m): "))
+    n = int(input("Indica el número de columnas (n): "))
+    
+   
+    if m != n:
+        print("❌ Error: Para calcular la matriz inversa, esta debe ser obligatoriamente cuadrada (m = n).")
+        return
+    
+   
+    print("Introduce los elementos de la matriz:")
+    filas = []
+    for i in range(m):
+        fila = []
+        for j in range(n):
+            valor = float(input(f"Elemento Fila {i+1}, Columna {j+1}: "))
+            fila.append(valor)
+        filas.append(fila)
+    
+    matriz = np.array(filas)
+    determinante = np.linalg.det(matriz)
+    
+ 
+    if abs(determinante) < 1e-9:
+        print(f"❌ Error: El determinante es 0 (o cercano a 0: {determinante}). Esta matriz no tiene inversa.")
+        return
+        
+    
+    inversa = np.linalg.inv(matriz)
+    
+    
+    print("\n--- Resultados ---")
+    print("Matriz Original (A):\n", matriz)
+    print(f"Determinante: {determinante:.2f}")
+    print("\nMatriz Inversa (A^-1):\n", inversa)
 
     return
-
 
     
 
@@ -309,13 +341,13 @@ def estudiar_simetria():
                            # El .T es de numpy para calcular la transpuesta
 
 
-    # RESULTADOS Estudio Simetria
+    
     print("\n--- Resultados del Análisis ---")
     print("Matriz A:\n", matriz)
     print("\nMatriz Traspuesta (A^T):")
     print(transpuesta)
     
-    # Comprobación 
+   
     es_simetrica = np.array_equal(matriz, transpuesta)
     es_antisimetrica = np.array_equal(matriz, -transpuesta)
     
@@ -336,7 +368,7 @@ def estudiar_simetria():
 
 
 def calcular_determinante(): 
-    print("\n--- 🧮 Cálculo de Determinante (Matriz 2x2) ---")
+    print("\n---Cálculo de Determinante (Matriz 2x2) ---")
 
 #El determinante es el número que te dice cuánto se ha multiplicado el tamaño original de esa área.
 #Los determinantes y las inversas SOLO se pueden hacer en matrices cuadradas (2x2, 3x3, etc etc)
