@@ -212,7 +212,36 @@ def multiplicar_matrices(): # No hay propiedad conmutativa
     return
 
 def potencia_matriz():
-    print("In process")
+    print("\n--- Potencia de una Matriz (A^n) ---")
+    
+   
+    exponente = int(input("Introduce el número al que se eleva (exponente n): "))
+    m = int(input("Indica el número de filas (m): "))
+    n = int(input("Indica el número de columnas (n): "))
+    
+   
+    if m != n:
+        print(" Error: Para calcular la potencia de una matriz, esta debe ser obligatoriamente cuadrada (m = n).")
+        return
+    
+    print("\nIntroduce los elementos de la matriz:")
+    filas = []
+    for i in range(m):
+        fila = []
+        for j in range(n):
+            valor = int(input(f"Elemento Fila {i+1}, Columna {j+1}: "))
+            fila.append(valor)
+        filas.append(fila)
+    
+    matriz = np.array(filas)
+
+    
+    resultado = np.linalg.matrix_power(matriz, exponente)
+
+   
+    print("\n--- Resultados de la Potencia ---")
+    print(f"Matriz A elevada a la {exponente} (A^{exponente}):\n", resultado)
+
     return
 
 def matriz_inversa():
