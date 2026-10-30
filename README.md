@@ -9,3 +9,4 @@ notes: The last topic (Matrices Bayesianas) is still underconstruction, just cop
        I need to check everything. 
 
 Other modules are updated!
+Right now its stopped, but could be re-uploaded in 6months
